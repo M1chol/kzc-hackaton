@@ -1,67 +1,82 @@
-* {
-  margin:  0;
+/* Resetowanie domyślnych styli przeglądarki */
+body, h1, h2, p, ul, li {
+  margin: 0;
   padding: 0;
 }
-h1 {
-  font-family: Impact, sans-serif;
-  color: #CE5937;
-  }
+
+/* Ustawienia dla całego dokumentu */
+body {
+  font-family: 'Helvetica', sans-serif;
+  background-color: #f2f2f2;
+}
+
+#container {
+  width: 90%;
+  margin: 5vh auto;
+  background-color: #fff;
+  box-shadow: 7px 4px 5vh rgba(0, 0, 0, 0.2);
+
+  background: linear-gradient(80deg, #9620a1, #e87400);
+}
+
+#header {
   
-  #container{
-    position: absolute;
-    background: rgb(29,71,175);
-    background: linear-gradient(138deg, rgba(29,71,175,1) 0%, rgba(101,57,140,1) 35%, rgba(235,61,102,1) 100%);
-    height: 100%;
-    width: 100%;
+  color: #fff;
+  padding: 2vh;
+  font-size: 5vh;
+  box-shadow: 7px 4px 5vh rgba(0, 0, 0, 0.2);
+  background-color:rgba(0,0,0,30%)
+}
+
+#main {
+  padding: 5vh;
+}
+
+#menu-text {
+  font-size: 2vh;
+}
+
+.mainTable {
+  display: flex;
+}
+
+.box {
+  padding: 5vh;
+  margin: 2.5vh;
+  background-color: #fff;
+  box-shadow: 7px 4px 5vh rgba(0, 0, 0, 0.2);
+  border-radius: 5vh;
+}
+
+#menu {
+  background-color:rgba(0,0,0,30%);
+  color: #fff;
+  /* Zwiększ szerokość i wysokość menu boxa */
+  width: 20%; /* Zmieniono na procenty */
+  height: 60vh;
+  display: flex;
+  flex-direction: column; /* Zmiana kierunku flex na kolumnę */
+  align-items: center; /* Wyśrodkuj elementy w kierunku osi Y */
+}
+
+#textArea {
+  background-color:rgba(0,0,0,30%);
+  /* Zwiększ szerokość i wysokość obszaru tekstu boxa */
+  width: 70%; /* Zmieniono na procenty */
+  height: 60vh;
+}
+
+.button {
+  margin-top: 2vh; /* Dodaj odstęp między przyciskami i tekstem */
+}
+
+/* RWD - responsywność */
+@media only screen and (max-width: 600px) {
+  .mainTable {
+    flex-direction: column;
   }
-  
-  #header{
-    background-color: gray;
-    height: 15%;
+
+  #menu, #textArea {
+    width: 100%; /* Ustaw pełną szerokość na małych ekranach */
   }
-  
-  #main{
-    height: 85%;
-  }
-  
-  .box{
-    background-color: blue;
-  }
-  
-  .mainTable{
-    height: 100%;
-    display: grid;
-    grid: 100% / 30% 60%;
-    grid-gap: 10%;
-  }
-  
-h1 {
-    font-family: Impact, sans-serif;
-    color: #CE5937;
-    }
-    
-    #container{
-      background: rgb(29,71,175);
-      background: linear-gradient(138deg, rgba(29,71,175,1) 0%, rgba(101,57,140,1) 35%, rgba(235,61,102,1) 100%);
-      height: 100%;
-    }
-    
-    #header{
-      background-color: gray;
-      height: 15%;
-    }
-    
-    #main{
-      height: 85%;
-    }
-    
-    .box{
-      background-color: blue;
-    }
-    
-    .mainTable{
-      height: 100%;
-      display: grid;
-      grid: 100% / 33.3% 66.6%;
-      grid-gap: 10%;
-    }
+}
