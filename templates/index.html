@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>HTML CSS JS</title>
-</head>
-<body>
-<div id="container">
-  <div id="header">
+  <head>
+    <html lang="en"></html>
+    <title>HTML CSS JS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='base.js') }}"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="header">
     DoxForge
   </div>
   <div id="main">
     <div class="mainTable">
       <div class="box" id="menu">
-        MENU
+        <div id="menu-title">Welcome</div>
+        <div id="menu-text">
+          Tool designed to create documentations for your projects. Lorem ipsum dolor sit amet! Consectetur adipiscing elit, sed do eiusmod tempor. incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </div>
+        <div>
+          <button type="button" class="button" onclick="sendText()">Upload Files</button>
+        </div>
+        <div>
+          <button type="button" class="button" onclick="sendText()">Next</button>
+        </div>
+        <div>
+          <button type="button" class="button" onclick="sendText()">Forge!</button>
+        </div>
       </div>
       <div class="box" id="textArea">
-        test
+        <textarea id="textInput" name="paste your code..." placeholder="paste your code..."></textarea>
       </div>
     </div>
   </div>

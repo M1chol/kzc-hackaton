@@ -1,31 +1,37 @@
 /* CSS styles */
+* {
+  margin:  0;
+  padding: 0;
+}
 h1 {
-    font-family: Impact, sans-serif;
-    color: #CE5937;
-    }
-    
-    #container{
-      background: rgb(29,71,175);
-      background: linear-gradient(138deg, rgba(29,71,175,1) 0%, rgba(101,57,140,1) 35%, rgba(235,61,102,1) 100%);
-      height: 100%;
-    }
-    
-    #header{
-      background-color: gray;
-      height: 15%;
-    }
-    
-    #main{
-      height: 85%;
-    }
-    
-    .box{
-      background-color: blue;
-    }
-    
-    .mainTable{
-      height: 100%;
-      display: grid;
-      grid: 100% / 30% 60%;
-      grid-gap: 10%;
-    }
+  font-family: Impact, sans-serif;
+  color: #CE5937;
+  }
+  
+  #container{
+    position: absolute;
+    background: rgb(29,71,175);
+    background: linear-gradient(138deg, rgba(29,71,175,1) 0%, rgba(101,57,140,1) 35%, rgba(235,61,102,1) 100%);
+    height: 100%;
+    width: 100%;
+  }
+  
+  #header{
+    background-color: gray;
+    height: 15%;
+  }
+  
+  #main{
+    height: 85%;
+  }
+  
+  .box{
+    background-color: blue;
+  }
+  
+  .mainTable{
+    height: 100%;
+    display: grid;
+    grid: 100% / 30% 60%;
+    grid-gap: 10%;
+  }
