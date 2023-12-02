@@ -16,6 +16,7 @@ app_api.add_middleware(
     allow_headers=["*"],
 )
 
+
 @app_api.post('/api/send-text')
 def send_text_api(text: str = Form(...), title: str = Form()):
     GPT_Instance = chatapigpt()
@@ -24,3 +25,7 @@ def send_text_api(text: str = Form(...), title: str = Form()):
     html = MarkToHtml(raw)
 
     return {"raw": raw, "html":html}
+
+@app_api.get('/api/get-text')
+def get_text():
+    return

@@ -9,7 +9,7 @@ def index():
 
 @app.route('/response')
 def load_response():
-    pass
+    return render_template('response.html')
   
 if __name__ == '__main__':
     app.run(debug=True)
