@@ -1,13 +1,10 @@
-var textInput = document.getElementById("textInput")
-var textTitle = document.getElementById("textFilename")
-var ip = location.host;
-
 function sendText(){
+    console.log(textInput.value);
     fetch('http://localhost:8000/api/send-text', {
         method: 'POST',
         body: new URLSearchParams({
-            text: textInput.value,
-            title: textTitle.value
+            text: document.getElementById("textInput").value,
+            title: document.getElementById("textFilename").value
         }),
     })
     .then(response => response.json())

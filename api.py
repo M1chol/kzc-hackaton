@@ -16,9 +16,9 @@ app_api.add_middleware(
 )
 
 @app_api.post('/api/send-text')
-def send_text_api(text: str = Form(...)):
+def send_text_api(text: str = Form(...), title: str = Form()):
     GPT_Instance = chatapigpt()
-    raw = GPT_Instance.contentMachine(GPT_Instance, text["text"])
+    raw = GPT_Instance.contentMachine(title, text)
     # wywołanie funkcji basi
     html = "html"
     print(raw)
