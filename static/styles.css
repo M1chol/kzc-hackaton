@@ -1,82 +1,98 @@
-/* Resetowanie domyślnych styli przeglądarki */
+/* CSS styles */
+*{
+  color: #f3efed;
+}
 body, h1, h2, p, ul, li {
   margin: 0;
   padding: 0;
 }
 
-/* Ustawienia dla całego dokumentu */
-body {
-  font-family: 'Helvetica', sans-serif;
-  background-color: #f2f2f2;
+#container{
+  position: absolute;
+  background: rgb(29,71,175);
+  background: linear-gradient(138deg, rgba(29,71,175,1) 0%, rgba(101,57,140,1) 35%, rgba(235,61,102,1) 100%);
+  height: 100%;
+  width: 100%;
 }
 
-#container {
-  width: 90%;
-  margin: 5vh auto;
-  background-color: #fff;
-  box-shadow: 7px 4px 5vh rgba(0, 0, 0, 0.2);
-
-  background: linear-gradient(80deg, #9620a1, #e87400);
+.headermenutitle{
+  padding: 0.8%;
 }
 
-#header {
-  
-  color: #fff;
-  padding: 2vh;
-  font-size: 5vh;
-  box-shadow: 7px 4px 5vh rgba(0, 0, 0, 0.2);
-  background-color:rgba(0,0,0,30%)
+#textFilename{
+  padding-left: 2%;
+  background-color: transparent;
+  border-top-color: initial;
+  border-right-color: initial;
+  border-left-color: initial;
+  border-bottom-color: gray;
+  border-top-style: initial;
+  border-right-style: initial;
+  border-bottom-style: solid;
+  border-right: transparent;
+  border-left-style: initial;
 }
 
-#main {
-  padding: 5vh;
+#header{
+  background-color: rgba(63, 61, 65, 60%);
+  height: 15%;
+  font-size: 200%;
+  padding-left: 1%;
 }
 
-#menu-text {
-  font-size: 2vh;
+#main{
+  height: 85%;
 }
 
-.mainTable {
-  display: flex;
+.box{
+  background-color: rgba(63, 61, 65, 40%);
+  border-radius: 20px;
+  margin: 10;
 }
 
-.box {
-  padding: 5vh;
-  margin: 2.5vh;
-  background-color: #fff;
-  box-shadow: 7px 4px 5vh rgba(0, 0, 0, 0.2);
-  border-radius: 5vh;
+.mainTable{
+  height: 100%;
+  display: grid;
+  grid: 100% / 30% auto;
+  grid-gap: 1%;
 }
 
-#menu {
-  background-color:rgba(0,0,0,30%);
-  color: #fff;
-  /* Zwiększ szerokość i wysokość menu boxa */
-  width: 20%; /* Zmieniono na procenty */
-  height: 60vh;
-  display: flex;
-  flex-direction: column; /* Zmiana kierunku flex na kolumnę */
-  align-items: center; /* Wyśrodkuj elementy w kierunku osi Y */
+#headermenu{
+  border-radius: 20px 20px 0 0;
+  background-color: rgba(63, 61, 65, 40%);
+  height: 10%;
+  text-align: center;
 }
 
-#textArea {
-  background-color:rgba(0,0,0,30%);
-  /* Zwiększ szerokość i wysokość obszaru tekstu boxa */
-  width: 70%; /* Zmieniono na procenty */
-  height: 60vh;
+#headermenu2{
+  border-radius: 20px 20px 0 0;
+  background-color: rgba(63, 61, 65, 40%);
+  height: 10%;
+}
+
+#textInput {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: 0;
 }
 
 .button {
-  margin-top: 2vh; /* Dodaj odstęp między przyciskami i tekstem */
+    width: 80%;
+    height: 10%;
+    text-align: center;
+    font-size: large;
+    margin-left: 10%;
+    margin-top: 4%; 
+    background-color: #393d99;
+    border-radius: 20px;
+    border: 0px;
+    box-shadow: 5px 5px 20px 6px rgba(0,0,0,0.2), 1px 3px 0px rgba(12,16,112,0.86);
+}
+#action-button{
+  background-color: #921e96;
 }
 
-/* RWD - responsywność */
-@media only screen and (max-width: 600px) {
-  .mainTable {
-    flex-direction: column;
-  }
-
-  #menu, #textArea {
-    width: 100%; /* Ustaw pełną szerokość na małych ekranach */
-  }
+#menuText{
+  padding: 5%;
 }

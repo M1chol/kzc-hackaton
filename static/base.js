@@ -2,8 +2,7 @@ function sendText(){
     console.log(textInput.value);
     var text_val = document.getElementById("textInput").value;
     var title_val = document.getElementById("textFilename").value;
-    // https://www.slashcoding.com/wp-content/uploads/2014/03/page-loader.gif
-    document.getElementById("textbox").innerHTML = '<img src="https://cdn.dribbble.com/users/2882885/screenshots/7861928/media/a4c4da396c3da907e7ed9dd0b55e5031.gif" alt="Animated GIF">';
+    document.getElementById("texttext").innerHTML = '<img src="https://www.slashcoding.com/wp-content/uploads/2014/03/page-loader.gif" alt="Animated GIF">';
     fetch('http://localhost:8000/api/send-text', {
         method: 'POST',
         body: new URLSearchParams({
@@ -23,6 +22,6 @@ function sendText(){
 }
 
 function displayText(response){
-    document.getElementById("textbox").innerHTML = response.html;
+    document.getElementById("texttext").innerHTML = response.html;
 
 }

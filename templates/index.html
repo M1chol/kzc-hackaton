@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <html lang="en"></html>
-    <title>HTML CSS JS</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="{{ url_for('static', filename='base.js') }}"></script>
-  </head>
-  <body>
-    <div id="container">
-      <div id="header">
-    DoxForge
+<head>
+<title>DoxForge</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+<script src="{{ url_for('static', filename='base.js') }}"></script>
+</head>
+<body>
+<div id="container">
+  <div id="header">
+    <div class="headermenutitle">
+          DoxForge
+    </div>
   </div>
   <div id="main">
     <div class="mainTable">
       <div class="box" id="menu">
-        <div id="menu-title">Welcome</div>
-        <div id="menu-text">
-          Tool designed to create documentations for your projects. Lorem ipsum dolor sit amet! Consectetur adipiscing elit, sed do eiusmod tempor. incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        <div id="headermenu">
+          <div class="headermenutitle">
+            Welcome
+          </div>
+        </div>
+        <div id="menuText">
+        Tool designed to create documentations for your projects.
+         Feel free to donate to our student account.  
         </div>
         <div>
           <button type="button" class="button" onclick="sendText()">Upload Files</button>
@@ -29,11 +35,13 @@
         </div>
       </div>
       <div class="box" id="textArea">
-        <div id="header">
-          <input placeholder="textFilename" id="textFilename"></textarea>
+        <div id="headermenu2">
+          <div class="headermenutitle">
+            <input placeholder="textFilename" id="textFilename">
+          </div>
         </div>
-        <div id="textbox">
-          <textarea id="textInput" name="paste your code..." placeholder="paste your code..."></textarea>
+        <div id="texttext">
+          <textarea id="textInput" name="paste your code..."></textarea>
         </div>
       </div>
     </div>
