@@ -2,3 +2,5 @@ Flask
 fastapi
 uvicorn
 openai
+python-multipart
+markdown
