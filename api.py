@@ -15,16 +15,12 @@ app_api.add_middleware(
     allow_headers=["*"],
 )
 
-messageList = []
-
-test = {"raw": "",
- "html": ""};
-
 @app_api.post('/api/send-text')
 def send_text_api(text: str = Form(...)):
     GPT_Instance = chatapigpt()
     raw = GPT_Instance.contentMachine(GPT_Instance, text["text"])
     # wywołanie funkcji basi
     html = "html"
+    print(raw)
 
     return {"raw": raw, "html":html}
