@@ -4,13 +4,20 @@
 <title>HTML CSS JS</title>
 </head>
 <body>
-<h1 id="welcome">HTML CSS JS</h1>
-<p>Welcome to HTML-CSS-JS.com</p>
-<p>Online HTML, CSS and JavaScript editor 
-with instant preview.</p>
-<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-
-    <!-- Link to your local JavaScript file -->
-    <script src="{{ url_for('static', filename='base.js') }}"></script>
+<div id="container">
+  <div id="header">
+    DoxForge
+  </div>
+  <div id="main">
+    <div class="mainTable">
+      <div class="box" id="menu">
+        MENU
+      </div>
+      <div class="box" id="textArea">
+        test
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
