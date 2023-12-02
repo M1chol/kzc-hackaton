@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 from aigpt import chatapigpt
+from markdownFunction import MarkToHtml
 
 app_api = FastAPI()
 
@@ -20,7 +21,6 @@ def send_text_api(text: str = Form(...), title: str = Form()):
     GPT_Instance = chatapigpt()
     raw = GPT_Instance.contentMachine(title, text)
     # wywołanie funkcji basi
-    html = "html"
-    print(raw)
+    html = MarkToHtml(raw)
 
     return {"raw": raw, "html":html}
